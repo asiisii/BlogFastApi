@@ -31,3 +31,18 @@ class User(BaseModel):
 @app.post("/user/")
 async def create_user(user: User):
     return user
+
+
+# input
+# {
+#   "email": "invalidemail.com",
+#   "callAccepted": true
+# }
+
+# output
+# {
+#   "errors": [
+#     "Sorry, you provided an invalid email.",
+#     "Phone number is required if accepted phone call is true."
+#   ]
+# }
